@@ -12,13 +12,13 @@ app.config['MYSQL_DATABASE_HOST'] = 'db'
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
 app.config['MYSQL_DATABASE_PORT'] = 3306
-app.config['MYSQL_DATABASE_DB'] = 'citiesData'
+app.config['MYSQL_DATABASE_DB'] = 'homes'
 mysql.init_app(app)
 
 
 @app.route('/', methods=['GET'])
 def index():
-    user = {'username': 'Cities Project'}
+    user = {'Stanley': 'Homes'}
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblhomesImport')
     result = cursor.fetchall()
@@ -66,8 +66,8 @@ def form_insert_post():
     inputData = (request.form.get('Sell'), request.form.get('List'), request.form.get('Living'),
                  request.form.get('rooms'), request.form.get('Beds'),
                  request.form.get('Baths'), request.form.get('Age'), request.form.get('Acres'),
-                 request.form.get('Taxes'))
-    sql_insert_query = """INSERT INTO tblhomesImport (Sell,List,Living,Rooms,Beds,Baths,Age,Acres,Taxes) VALUES (%s, %s,%s, %s,%s, %s,%s) """
+                 request.form.get('Taxes'), request.form.get('id'))
+    sql_insert_query = """INSERT INTO tblhomesImport (Sell,List,Living,Rooms,Beds,Baths,Age,Acres,Taxes,id) VALUES (%s, %s,%s, %s,%s, %s,%s,%s,%s,%s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)

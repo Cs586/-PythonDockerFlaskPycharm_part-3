@@ -17,7 +17,7 @@
     <tbody>
     {% for city in cities %}
     <tr>
-        <td>{{ city.Sell }}</td>
+        <td><a href="view/{{city.id}}">{{ city.Sell }}</a></td>
         <td>{{ city.List }}</td>
         <td>{{ city.Living }}</td>
         <td>{{ city.Rooms }}</td>
