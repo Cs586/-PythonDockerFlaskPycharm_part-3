@@ -3,42 +3,56 @@
 <form action="/edit/{{city.id}}" method="post">
     <div class="row">
         <div class="col">
-            <label for="fldName">City Name</label>
-            <input id="fldName" type="text" class="form-control" placeholder="City Name" name="fldName" value="{{city.fldName}}">
+            <label for="Sell">Sell numbers</label>
+            <input id="Sell" type="text" class="form-control" placeholder="Sell numbers" name="Sell" value="{{city.Sell}}">
         </div>
         <div class="col">
-            <label for="fldAbbreviation">City Abbreviation</label>
-            <input id="fldAbbreviation" type="text" class="form-control" placeholder="City Abbreviation"
-                   name="fldAbbreviation" value="{{city.fldAbbreviation}}">
+            <label for="List">Ranking</label>
+            <input id="List" type="text" class="form-control" placeholder="Ranking"
+                   name="List" value="{{city.List}}">
         </div>
         <div class="col">
-            <label for="fldCountry">City Country</label>
-            <input id="fldCountry" type="text" class="form-control" placeholder="City Country" name="fldCountry" value="{{city.fldCountry}}">
+            <label for="Living">Living room</label>
+            <input id="Living" type="text" class="form-control" placeholder="Living room" name="Living" value="{{city.Living}">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            <label for="fldLat">City Latitude</label>
-            <input id="fldLat" type="text" class="form-control" placeholder="City Latitude" name="fldLat" value="{{city.fldLat}}">
+            <label for="Rooms">Room numbers</label>
+            <input id="Rooms" type="text" class="form-control" placeholder="Room numbers" name="Rooms" value="{{city.Rooms}}">
         </div>
         <div class="col">
-            <label for="fldlong">City Longitude</label>
-            <input id="fldlong" type="text" class="form-control" placeholder="City Longitude" name="fldLong" value="{{city.fldLong}}">
+            <label for="Beds">Beds numbers</label>
+            <input id="Beds" type="text" class="form-control" placeholder="Beds numbers" name="Beds" value="{{city.Beds}}">
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <label for="fldCapitalStatus">Capital Status</label>
+            <label for="Baths">Bathroom numbers</label>
 
-            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Capital Status"
-                   name="fldCapitalStatus" value="{{city.fldCapitalStatus}}">
+            <input id="Baths" type="text" class="form-control" placeholder="Bathroom numbers"
+                   name="Baths" value="{{city.Baths}}">
         </div>
         <div class="col">
-            <label for="fldPopulation">City Population</label>
-            <input id="fldPopulation" type="text" class="form-control" placeholder="Population" name="fldPopulation" value="{{city.fldPopulation}}">
+            <label for="Age">Years</label>
+            <input id="Age" type="text" class="form-control" placeholder="Years" name="Age" value="{{city.Age}}">
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <label for="Acres">Acres of the land</label>
+
+            <input id="Acres" type="text" class="form-control" placeholder="Acres of the land"
+                   name="Acres" value="{{city.Acres}}">
+        </div>
+        <div class="row">
+        <div class="col">
+            <label for="Taxes">Taxes of the property</label>
+
+            <input id="Taxes" type="text" class="form-control" placeholder="Taxes of the property"
+                   name="Taxes" value="{{city.Taxes}}">
+        </div>
     <button type="submit" class="btn btn-success">Save</button>
 
 </form>

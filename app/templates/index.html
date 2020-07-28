@@ -3,25 +3,29 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">City Name</th>
-        <th scope="col">Latitude</th>
-        <th scope="col">Longitude</th>
-        <th scope="col">Country</th>
-        <th scope="col">Abbreviation</th>
-        <th scope="col">Capital Status</th>
-        <th scope="col">Population</th>
+        <th scope="col">Sell numbers</th>
+        <th scope="col">Ranking</th>
+        <th scope="col">Living room</th>
+        <th scope="col">Room numbers</th>
+        <th scope="col">Beds numbers</th>
+        <th scope="col">Bathroom numbers</th>
+        <th scope="col">Years</th>
+        <th scope="col">Acres of the land</th>
+        <th scope="col">Taxes of the property</th>
     </tr>
     </thead>
     <tbody>
     {% for city in cities %}
     <tr>
-        <td><a href="view/{{city.id}}">{{ city.fldName }}</a></td>
-        <td>{{ city.fldLat }}</td>
-        <td>{{ city.fldLong }}</td>
-        <td>{{ city.fldCountry }}</td>
-        <td>{{ city.fldAbbreviation }}</td>
-        <td>{{ city.fldCapitalStatus }}</td>
-        <td>{{ city.fldPopulation }}</td>
+        <td>{{ city.Sell }}</td>
+        <td>{{ city.List }}</td>
+        <td>{{ city.Living }}</td>
+        <td>{{ city.Rooms }}</td>
+        <td>{{ city.Beds }}</td>
+        <td>{{ city.Baths }}</td>
+        <td>{{ city.Age }}</td>
+        <td>{{ city.Acres }}</td>
+        <td>{{ city.Taxes }}</td>
     </tr>
     {% endfor %}
     </tbody>
