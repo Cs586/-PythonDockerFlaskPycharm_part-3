@@ -2,24 +2,25 @@
 {% block content %}
 
 <div class="card" class="m-5 p-2">
-    <h5 class="card-title">{{ city.id }} - {{ city.List }}</h5>
+    <h5 class="card-title">ID - {{ city.id }}-homes</h5>
 
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{ city.Sell }}</li>
-        <li class="list-group-item">{{ city.Living }}</li>
-        <li class="list-group-item">{{ city.Rooms }}</li>
-        <li class="list-group-item">{{ city.Beds }}</li>
-        <li class="list-group-item">{{ city.Baths }}</li>
-        <li class="list-group-item">{{ city.Age }}</li>
-        <li class="list-group-item">{{ city.Acres }}</li>
-        <li class="list-group-item">{{ city.Taxes }}</li>
+        <li class="list-group-item">Sell numbers: {{ city.Sell }}</li>
+        <li class="list-group-item">Ranking: {{ city.List }}</li>
+        <li class="list-group-item">Living room: {{ city.Living }}</li>
+        <li class="list-group-item">Room numbers: {{ city.Rooms }}</li>
+        <li class="list-group-item">Beds numbers: {{ city.Beds }}</li>
+        <li class="list-group-item">Bathroom numbers: {{ city.Baths }}</li>
+        <li class="list-group-item">Years: {{ city.Age }}</li>
+        <li class="list-group-item">Acres of the land: {{ city.Acres }}</li>
+        <li class="list-group-item">Taxes of the property: {{ city.Taxes }}</li>
 
     </ul>
     <div class="card-body">
         <a href="/edit/{{city.id}}" class="card-link btn btn-primary">edit</a>
     </div>
 </div>
-<form action="/delete/{{city.id}}" method="post"><button type="submit" class="btn btn-danger">Save</button></form>
+<form action="/delete/{{city.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
 
 
 {% endblock %}

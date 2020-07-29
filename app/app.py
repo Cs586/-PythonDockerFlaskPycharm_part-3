@@ -18,7 +18,7 @@ mysql.init_app(app)
 
 @app.route('/', methods=['GET'])
 def index():
-    user = {'Stanley': 'Homes'}
+    user = {'username': 'Homes'}
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblhomesImport')
     result = cursor.fetchall()
@@ -66,8 +66,9 @@ def form_insert_post():
     inputData = (request.form.get('Sell'), request.form.get('List'), request.form.get('Living'),
                  request.form.get('rooms'), request.form.get('Beds'),
                  request.form.get('Baths'), request.form.get('Age'), request.form.get('Acres'),
-                 request.form.get('Taxes'), request.form.get('id'))
-    sql_insert_query = """INSERT INTO tblhomesImport (Sell,List,Living,Rooms,Beds,Baths,Age,Acres,Taxes,id) VALUES (%s, %s,%s, %s,%s, %s,%s,%s,%s,%s) """
+                 request.form.get('Taxes'))
+    sql_insert_query = """INSERT INTO tblhomesImport (Sell,List,Living,Rooms,Beds,Baths,Age,Acres,Taxes) VALUES (%s, 
+    %s,%s, %s,%s, %s,%s,%s,%s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
